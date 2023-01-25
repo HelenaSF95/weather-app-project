@@ -5,80 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <form action="submit">
-            <input type="text" placeholder="Find your city.." />
-            <input type="button" value="Search" />
-          </form>
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-12">
+            <form action="submit">
+              <input type="text" placeholder="Find your city.." />
+              <input type="button" value="Search" />
+            </form>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <h1>4 °C|°F</h1>
-          <ul>
-            <li>Nedbør: 11%</li>
-            <li>Luftfugtighed: 89%</li>
-            <li>Vind: 8 m/s</li>
-          </ul>
+        <div class="row">
+          <div class="col-6">
+            <h1>4 °C|°F</h1>
+          </div>
+          <div class="col">
+            <ul class="temp-metrics">
+              <li>Nedbør: 11%</li>
+              <li>Luftfugtighed: 89%</li>
+              <li>Vind: 8 m/s</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h2>Fanø</h2>
+            <ul class="date-description">
+              <li>Onsdag 13:00</li>
+              <li>Skyet</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-6">
-          <h2>Fanø</h2>
-          <ul>
-            <li>Onsdag 13:00</li>
-            <li>Skyet</li>
-          </ul>
+        <div class="row">
+          <div class="col">
+            <span>Onsdag</span>
+            <div>🌧</div>
+            <div>4°</div>
+          </div>
+          <div class="col">
+            <span>Torsdag</span>
+            <div>🌧</div>
+            <div>4°</div>
+          </div>
+          <div class="col">
+            <span>Fredag</span>
+            <div>🌧</div>
+            <div>7°</div>
+          </div>
+          <div class="col">
+            <span>Lørdag</span>
+            <div>🌧</div>
+            <div>8°</div>
+          </div>
+          <div class="col">
+            <span>Søndag</span>
+            <div>🌧</div>
+            <div>4°</div>
+          </div>
+          <div class="col">
+            <span>Mandag</span>
+            <div>🌧</div>
+            <div>10°</div>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <span>Onsdag</span>
-          <div>🌧</div>
-          <div>4°</div>
-        </div>
-        <div class="col">
-          <span>Torsdag</span>
-          <div>🌧</div>
-          <div>4°</div>
-        </div>
-        <div class="col">
-          <span>Fredag</span>
-          <div>🌧</div>
-          <div>7°</div>
-        </div>
-        <div class="col">
-          <span>Lørdag</span>
-          <div>🌧</div>
-          <div>8°</div>
-        </div>
-        <div class="col">
-          <span>Søndag</span>
-          <div>🌧</div>
-          <div>4°</div>
-        </div>
-        <div class="col">
-          <span>Mandag</span>
-          <div>🌧</div>
-          <div>10°</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <small>
-            This project was coded by Helena Sahlholdt Fuglsbjerg ans is
-            open-sourced on GitHub and hosted on Netlify
-          </small>
-        </div>
+        <small>
+          This project was coded by Helena Sahlholdt Fuglsbjerg ans is
+          open-sourced on GitHub and hosted on Netlify
+        </small>
       </div>
     </div>
     <script src="src/app.js"></script>
