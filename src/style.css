@@ -18,8 +18,8 @@ h2 {
 }
 
 ul {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 14px;
   margin: 0;
   padding: 0;
 }
@@ -28,16 +28,53 @@ li {
   list-style: none;
 }
 
-.weather-app {
+small {
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.app-wrapper {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 30px auto;
+}
+
+.weather-app {
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 10px;
 }
 
-.temp-metrics {
-  display: inline;
+.search-form {
+  margin-bottom: 20px;
+}
+
+.current-weather-overview {
+  margin-bottom: 40px;
+}
+
+.weather-temperature .current-weather-emoji {
+  font-size: 64px;
+  margin-right: 10px;
+  line-height: 56px;
+  position: relative;
+  top: 5px;
+}
+
+.weather-temperature h1 {
+  position: relative;
+  top: -2px;
+}
+
+.weather-temperature .units {
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+}
+
+.weather-temperature ul {
+  position: relative;
+  top: 5px;
 }
 
 .date-description {

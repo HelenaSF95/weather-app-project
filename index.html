@@ -15,69 +15,83 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="row">
-          <div class="col-12">
-            <form action="submit">
-              <input type="text" placeholder="Find your city.." />
-              <input type="button" value="Search" />
-            </form>
+      <div class="app-wrapper">
+        <div class="weather-app">
+          <div class="search-form">
+            <div class="row">
+              <div class="col-12">
+                <form action="submit">
+                  <input type="text" placeholder="Find your city.." />
+                  <input type="button" value="Search" />
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <h1>4 °C|°F</h1>
+          <div class="current-weather-overview">
+            <div class="row">
+              <div class="col-8">
+                <div class="d-flex weather-temperature">
+                  <span class="current-weather-emoji">☁️</span>
+                  <h1>4</h1>
+                  <span class="units">°C |°F</span>
+                  <span>
+                    <ul class="temp-metrics">
+                      <li>Nedbør: 11%</li>
+                      <li>Luftfugtighed: 89%</li>
+                      <li>Vind: 8 m/s</li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+              <div class="col">
+                <h2>Fanø</h2>
+                <ul class="date-description">
+                  <li>Onsdag 13:00</li>
+                  <li>Skyet</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col">
-            <ul class="temp-metrics">
-              <li>Nedbør: 11%</li>
-              <li>Luftfugtighed: 89%</li>
-              <li>Vind: 8 m/s</li>
-            </ul>
-          </div>
-          <div class="col">
-            <h2>Fanø</h2>
-            <ul class="date-description">
-              <li>Onsdag 13:00</li>
-              <li>Skyet</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <span>Onsdag</span>
-            <div>🌧</div>
-            <div>4°</div>
-          </div>
-          <div class="col">
-            <span>Torsdag</span>
-            <div>🌧</div>
-            <div>4°</div>
-          </div>
-          <div class="col">
-            <span>Fredag</span>
-            <div>🌧</div>
-            <div>7°</div>
-          </div>
-          <div class="col">
-            <span>Lørdag</span>
-            <div>🌧</div>
-            <div>8°</div>
-          </div>
-          <div class="col">
-            <span>Søndag</span>
-            <div>🌧</div>
-            <div>4°</div>
-          </div>
-          <div class="col">
-            <span>Mandag</span>
-            <div>🌧</div>
-            <div>10°</div>
+
+          <div class="row">
+            <div class="col">
+              <span>Onsdag</span>
+              <div>🌧</div>
+              <div>4°</div>
+            </div>
+            <div class="col">
+              <span>Torsdag</span>
+              <div>🌧</div>
+              <div>4°</div>
+            </div>
+            <div class="col">
+              <span>Fredag</span>
+              <div>🌧</div>
+              <div>7°</div>
+            </div>
+            <div class="col">
+              <span>Lørdag</span>
+              <div>🌧</div>
+              <div>8°</div>
+            </div>
+            <div class="col">
+              <span>Søndag</span>
+              <div>🌧</div>
+              <div>4°</div>
+            </div>
+            <div class="col">
+              <span>Mandag</span>
+              <div>🌧</div>
+              <div>10°</div>
+            </div>
           </div>
         </div>
         <small>
-          This project was coded by Helena Sahlholdt Fuglsbjerg ans is
-          open-sourced on GitHub and hosted on Netlify
+          This project was coded by Helena Sahlholdt Fuglsbjerg and is
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            >open-sourced on GitHub</a
+          >
+          and hosted on Netlify
         </small>
       </div>
     </div>
