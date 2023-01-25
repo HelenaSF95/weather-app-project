@@ -29,8 +29,9 @@ li {
 }
 
 small {
-  font-size: 12px;
-  margin-top: 0;
+  font-size: 10px;
+  line-height: 10px;
+  margin-bottom: 0;
 }
 
 .app-wrapper {
