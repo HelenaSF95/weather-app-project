@@ -1,3 +1,28 @@
+function formatDate(timestamp) {
+  let currentDate = new Date(timestamp);
+  let hours = currentDate.getHours();
+  let minutes = currentDate.getMinutes();
+  let weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = weekdays[currentDate.getDay()];
+
+  if (hours < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
+}
+
 function getWeather(response) {
   let cityElement = document.querySelector("#city");
   let descripElement = document.querySelector("#description");
@@ -5,12 +30,14 @@ function getWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
   //let weatherIcon = document.querySelector("#current-weather-emoji");
+  let dateElement = document.querySelector("#date");
 
   cityElement.innerHTML = response.data.city;
   descripElement.innerHTML = response.data.condition.description;
   tempElement.innerHTML = Math.round(response.data.temperature.current);
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.time * 1000);
   //weatherIcon.innerHTML = response.data.condition.icon_url;
 
   console.log(response.data.condition.icon_url);
