@@ -1,5 +1,6 @@
 function formatDate(timestamp) {
   let currentDate = new Date(timestamp);
+  console.log(currentDate);
   let hours = currentDate.getHours();
   let minutes = currentDate.getMinutes();
   let weekdays = [
