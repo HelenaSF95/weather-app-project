@@ -41,8 +41,20 @@ function getWeather(response) {
   weatherIcon.setAttribute("src", response.data.condition.icon_url);
 }
 
-let apiKey = `abodftdf7899f82673d6451a0b0db4af`;
-let city = `Paris`;
-let units = `metric`;
-let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
-axios.get(url).then(getWeather);
+function search(city) {
+  let apiKey = `abodftdf7899f82673d6451a0b0db4af`;
+  let units = `metric`;
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(url).then(getWeather);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-input-city");
+  search(cityInput.value);
+}
+
+search("New York");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

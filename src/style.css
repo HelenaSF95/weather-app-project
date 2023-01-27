@@ -5,7 +5,7 @@ body {
 h1 {
   font-size: 48px;
   line-height: 56px;
-  color: gray;
+  color: black;
   margin-bottom: 0;
 }
 
@@ -41,7 +41,7 @@ small {
 }
 
 .weather-app {
-  padding: 20px;
+  padding: 10px;
   border: 1px solid gray;
   border-radius: 10px;
 }
