@@ -54,11 +54,9 @@ small {
 }
 
 .weather-temperature .current-weather-emoji {
-  font-size: 64px;
+  font-size: 48px;
   margin-right: 10px;
   line-height: 56px;
-  position: relative;
-  top: 5px;
 }
 
 .weather-temperature h1 {
