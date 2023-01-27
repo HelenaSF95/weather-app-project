@@ -32,23 +32,23 @@
             <div class="row">
               <div class="col-8">
                 <div class="d-flex weather-temperature">
-                  <span class="current-weather-emoji">☁️</span>
-                  <h1>4</h1>
+                  <span class="current-weather-emoji">☀️</span>
+                  <h1 id="current-temperature"></h1>
                   <span class="units">°C |°F</span>
                   <span>
                     <ul class="temp-metrics">
                       <li>Nedbør: 11%</li>
-                      <li>Luftfugtighed: 89%</li>
-                      <li>Vind: 8 m/s</li>
+                      <li>Humidity: <span id="humidity"></span>%</li>
+                      <li>Wind: <span id="wind-speed"></span>m/s</li>
                     </ul>
                   </span>
                 </div>
               </div>
               <div class="col">
-                <h2>Fanø</h2>
+                <h2 id="city"></h2>
                 <ul class="date-description">
-                  <li>Onsdag 13:00</li>
-                  <li>Skyet</li>
+                  <li id="day"><span id="time"></span></li>
+                  <li id="description"></li>
                 </ul>
               </div>
             </div>

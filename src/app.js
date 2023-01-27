@@ -1,10 +1,19 @@
 function getWeather(response) {
-  console.log(response.data.city);
-  console.log(response.data.condition.description);
+  let cityElement = document.querySelector("#city");
+  let descripElement = document.querySelector("#description");
+  let tempElement = document.querySelector("#current-temperature");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind-speed");
+  //let weatherIcon = document.querySelector("#current-weather-emoji");
+
+  cityElement.innerHTML = response.data.city;
+  descripElement.innerHTML = response.data.condition.description;
+  tempElement.innerHTML = Math.round(response.data.temperature.current);
+  humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  //weatherIcon.innerHTML = response.data.condition.icon_url;
+
   console.log(response.data.condition.icon_url);
-  console.log(Math.round(response.data.temperature.current));
-  console.log(Math.round(response.data.temperature.humidity));
-  console.log(Math.round(response.data.wind.speed));
   console.log(response.data.time);
 }
 
