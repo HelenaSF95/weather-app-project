@@ -82,10 +82,6 @@ small {
   text-align: right;
 }
 
-.date::first-letter {
-  text-transform: capitalize;
-}
-
-.description::first-letter {
+li .date-description::first-letter {
   text-transform: capitalize;
 }
