@@ -39,10 +39,7 @@ function getWeather(response) {
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
-  weatherIcon.innerHTML = response.data.condition.icon_url;
-
-  console.log(response.data.condition.icon_url);
-  console.log(response.data.time);
+  //weatherIcon.innerHTML = response.data.condition.icon_url;
 }
 
 let apiKey = `abodftdf7899f82673d6451a0b0db4af`;
