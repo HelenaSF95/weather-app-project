@@ -38,7 +38,7 @@ function getWeather(response) {
   tempElement.innerHTML = Math.round(response.data.temperature.current);
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.time * 1000);
+  dateElement.innerHTML = formatDate(response.data.time * 1000);
   //weatherIcon.innerHTML = response.data.condition.icon_url;
 
   console.log(response.data.condition.icon_url);
