@@ -58,6 +58,7 @@ small {
   font-size: 48px;
   margin-right: 10px;
   line-height: 56px;
+  display: inline;
 }
 
 .weather-temperature h1 {

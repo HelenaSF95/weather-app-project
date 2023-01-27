@@ -30,7 +30,7 @@ function getWeather(response) {
   let tempElement = document.querySelector("#current-temperature");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
-  //let weatherIcon = document.querySelector("#current-weather-emoji");
+  let weatherIcon = document.querySelector("#icon");
   let dateElement = document.querySelector("#date");
 
   cityElement.innerHTML = response.data.city;
@@ -39,7 +39,7 @@ function getWeather(response) {
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
-  //weatherIcon.innerHTML = response.data.condition.icon_url;
+  weatherIcon.innerHTML = response.data.condition.icon_url;
 
   console.log(response.data.condition.icon_url);
   console.log(response.data.time);
