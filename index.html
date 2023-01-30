@@ -20,79 +20,47 @@
         <div class="weather-app">
           <form id="search-form" class="mb-3">
             <div class="row">
-              <div class="col-10">
+              <div class="col-9">
                 <input
                   id="search-input-city"
                   type="text"
                   placeholder="Find your city.."
-                  class="form-control form-control-sm"
+                  class="form-control"
                   autocomplete="off"
                 />
               </div>
-              <div class="col-2">
+              <div class="col-3">
                 <input
                   type="submit"
                   value="Search"
-                  class="btn btn-primary btn-sm w-100"
+                  class="btn btn-primary w-100"
                 />
               </div>
             </div>
           </form>
-          <div class="current-weather-overview">
-            <div class="row">
-              <div class="col-8">
-                <div class="d-flex weather-temperature">
-                  <img id="icon" src="#" alt="" class="current-weather-emoji" />
-                  <h1 id="current-temperature"></h1>
-                  <span class="units">°C | °F</span>
-                  <span>
-                    <ul class="temp-metrics">
-                      <li>Humidity: <span id="humidity"></span> %</li>
-                      <li>Wind: <span id="wind-speed"></span> m/s</li>
-                    </ul>
-                  </span>
-                </div>
-              </div>
-              <div class="col">
-                <h2 id="city"></h2>
-                <ul class="date-description">
-                  <li id="date" class="date-description"></li>
-                  <li id="description" class="date-description"></li>
-                </ul>
-              </div>
+          <div class="row">
+            <div class="col">
+              <h2 id="city"></h2>
+              <ul class="date-description">
+                <li id="date" class="date-description"></li>
+                <li id="description" class="date-description"></li>
+              </ul>
             </div>
           </div>
-
           <div class="row">
-            <div class="col-2">
-              <span>Onsdag</span>
-              <div>🌧</div>
-              <div>4°</div>
-            </div>
-            <div class="col-2">
-              <span>Torsdag</span>
-              <div>🌧</div>
-              <div>4°</div>
-            </div>
-            <div class="col-2">
-              <span>Fredag</span>
-              <div>🌧</div>
-              <div>7°</div>
-            </div>
-            <div class="col-2">
-              <span>Lørdag</span>
-              <div>🌧</div>
-              <div>8°</div>
-            </div>
-            <div class="col-2">
-              <span>Søndag</span>
-              <div>🌧</div>
-              <div>4°</div>
-            </div>
-            <div class="col-2">
-              <span>Mandag</span>
-              <div>🌧</div>
-              <div>10°</div>
+            <div class="col">
+              <div class="d-flex weather-temperature">
+                <img id="icon" src="#" alt="" class="current-weather-emoji" />
+                <h1 id="current-temperature"></h1>
+                <span class="units"
+                  ><a id="celcius-link" href="#" class="active-link">°C</a> |
+                  <a id="fahrenheit-link" href="#">°F</a></span
+                >
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind-speed"></span> km/h</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

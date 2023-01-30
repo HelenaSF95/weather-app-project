@@ -14,10 +14,10 @@ function formatDate(timestamp) {
   let day = weekdays[currentDate.getDay()];
 
   if (hours < 10) {
-    minutes = `0${minutes}`;
-  }
-  if (hours < 10) {
     hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
 
   return `${day} ${hours}:${minutes}`;
@@ -32,9 +32,11 @@ function getWeather(response) {
   let weatherIcon = document.querySelector("#icon");
   let dateElement = document.querySelector("#date");
 
+  celciusTemperature = response.data.temperature.current;
+
   cityElement.innerHTML = response.data.city;
   descripElement.innerHTML = response.data.condition.description;
-  tempElement.innerHTML = Math.round(response.data.temperature.current);
+  tempElement.innerHTML = Math.round(celciusTemperature);
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
@@ -54,7 +56,32 @@ function handleSubmit(event) {
   search(cityInput.value);
 }
 
-search("New York");
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  celciusLink.classList.remove("active-link");
+  fahrenheitLink.classList.add("active-link");
+  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  let temperature = document.querySelector("#current-temperature");
+  temperature.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelciusTemp(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active-link");
+  fahrenheitLink.classList.remove("active-link");
+  let temperature = document.querySelector("#current-temperature");
+  temperature.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelciusTemp);
+
+search("New York");
