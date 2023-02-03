@@ -23,6 +23,33 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wen"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+          <img
+            id="forecast-icon"
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+            class="forecast-icon"/>
+        <div class="weather-forecast-temp">
+          <span class="weather-forecast-max">3°</span>
+          <span class="weather-forecast-min">0°</span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function getWeather(response) {
   let cityElement = document.querySelector("#city");
   let descripElement = document.querySelector("#description");
@@ -84,4 +111,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemp);
 
+displayForecast();
 search("New York");
