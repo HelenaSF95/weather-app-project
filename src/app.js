@@ -108,32 +108,7 @@ function handleSubmit(event) {
   search(cityInput.value);
 }
 
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  celciusLink.classList.remove("active-link");
-  fahrenheitLink.classList.add("active-link");
-  let fahrenheitTemp = (celciusTemperature * 9) / 5 + 32;
-  let temperature = document.querySelector("#current-temperature");
-  temperature.innerHTML = Math.round(fahrenheitTemp);
-}
-
-function showCelciusTemp(event) {
-  event.preventDefault();
-  celciusLink.classList.add("active-link");
-  fahrenheitLink.classList.remove("active-link");
-  let temperature = document.querySelector("#current-temperature");
-  temperature.innerHTML = Math.round(celciusTemperature);
-}
-
-let celciusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", showCelciusTemp);
-
-search("New York");
+search("Copenhagen");
