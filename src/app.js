@@ -33,7 +33,6 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let weatherForecast = response.data.daily;
-  console.log(response.data);
 
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
@@ -85,7 +84,6 @@ function getWeather(response) {
   let dateElement = document.querySelector("#date");
 
   celciusTemperature = response.data.temperature.current;
-
   cityElement.innerHTML = response.data.city;
   descripElement.innerHTML = response.data.condition.description;
   tempElement.innerHTML = Math.round(celciusTemperature);
@@ -114,7 +112,7 @@ function showFahrenheitTemp(event) {
   event.preventDefault();
   celciusLink.classList.remove("active-link");
   fahrenheitLink.classList.add("active-link");
-  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  let fahrenheitTemp = (celciusTemperature * 9) / 5 + 32;
   let temperature = document.querySelector("#current-temperature");
   temperature.innerHTML = Math.round(fahrenheitTemp);
 }
