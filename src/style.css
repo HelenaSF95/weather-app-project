@@ -5,14 +5,14 @@ body {
 h1 {
   font-size: 64px;
   line-height: 1;
-  color: black;
+  color: #0881a3;
   font-weight: 400;
 }
 
 h2 {
   font-size: 22px;
   line-height: 26px;
-  color: #878787;
+  color: #ffd6a4;
   margin-bottom: 0;
 }
 
@@ -21,7 +21,7 @@ ul {
   line-height: 18px;
   margin: 0;
   padding: 0;
-  color: #878787;
+  color: #ffd6a4;
 }
 
 li {
@@ -32,6 +32,7 @@ small {
   font-size: 10px;
   line-height: 10px;
   font-family: Roboto Mono;
+  color: #0881a3;
 }
 
 a {
@@ -49,7 +50,7 @@ img {
 }
 
 .app-wrapper {
-  max-width: 600px;
+  max-width: 700px;
   margin: 30px auto;
 }
 
@@ -59,8 +60,28 @@ img {
   border-radius: 4px;
 }
 
-.search-form {
+.information {
   margin-bottom: 20px;
+}
+
+.search-form {
+  margin-bottom: 30px;
+}
+
+.test {
+  border-color: #0881a3;
+}
+
+.button {
+  color: white;
+  background: #ffd6a4;
+  border-color: #ffd6a4;
+}
+
+.button:hover {
+  color: #ffd6a4;
+  background-color: white;
+  border-color: #ffd6a4;
 }
 
 .date-description::first-letter {
@@ -80,23 +101,19 @@ img {
   margin: 0 10px 0 5px;
   position: relative;
   top: 2px;
-}
-
-.weather-temperature .units .active-link {
-  cursor: default;
-  color: black;
-  text-decoration: none;
+  color: #0881a3;
 }
 
 .weather-temperature ul {
   position: relative;
   top: 3px;
+  font-weight: 200;
 }
 
 .weather-forecast {
   margin-top: 30px;
   text-align: center;
-  color: black;
+  color: #ffd6a4;
   font-family: Roboto Mono;
 }
 
@@ -107,7 +124,7 @@ img {
 
 .weather-forecast-date {
   font-size: 16px;
-  opacity: 0.5;
+  opacity: 0.7;
   line-height: 18px;
 }
 
@@ -116,5 +133,5 @@ img {
 }
 
 .weather-forecast-min {
-  opacity: 0.5;
+  opacity: 0.7;
 }
